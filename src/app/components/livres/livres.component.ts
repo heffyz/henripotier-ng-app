@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Book} from "../../models/book";
 import {ImportBooksService} from "../../services/import-books.service";
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-livres',
