@@ -1,0 +1,8 @@
+<div class="w3-display-container">
+  <img src="../../../assets/img/library.jpg" class="w3-opacity" style="width: 100%;" alt="Lights">
+
+<div class="w3-display-bottomleft w3-container">
+<div *ngFor="let book of books" style="display: inline">
+  <app-livre  [book]="book" ></app-livre>
+</div></div>
+</div>
