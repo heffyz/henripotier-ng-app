@@ -10,12 +10,13 @@ import * as $ from 'jquery';
   providers: [ImportBooksService]
 })
 export class LivresComponent implements OnInit {
-books:Book[];
+books:Book[]=[];
   constructor(private importBooks: ImportBooksService) {
     this.importBooks.getBooks().subscribe((books)=>this.books=books);
   }
 
   ngOnInit() {
+
   }
 
 }

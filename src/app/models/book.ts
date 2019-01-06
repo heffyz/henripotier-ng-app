@@ -3,13 +3,13 @@ export class Book {
   title: string;
   price: number;
   cover: string;
-  synposis: string[];
+  synopsis: string[]=[];
 
-  constructor(isbn: string, title: string, price: number, cover: string, synposis: string[]) {
+  constructor(isbn: string, title: string, price: number, cover: string, synopsis: string[]) {
     this.isbn = isbn;
     this.title = title;
     this.price = price;
     this.cover = cover;
-    this.synposis = synposis;
+    this.synopsis = synopsis;
   }
 }

@@ -1,7 +1,23 @@
 @import url('https://www.w3schools.com/w3css/4/w3.css');
+@import url('https://fonts.googleapis.com/css?family=Anaheim|Domine');
+html { height: 100%; }
+
+
+
+
+.main {
+  width: 100%;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0px 60px 0px 30px;
+}
+
 .bk-list {
   list-style: none;
   position: relative;
+
 }
 
 .bk-list li {
@@ -10,6 +26,7 @@
   float: left;
   z-index: 1;
   margin: 0px 50px 40px 0;
+
   -webkit-perspective: 1800px;
   perspective: 1800px;
 }
@@ -24,19 +41,23 @@
 }
 
 .bk-info h3 {
-  padding: 25px 0 10px;
+  font-family: 'Domine', serif;
+  padding: 0px 0 10px;
   margin-bottom: 20px;
   border-bottom: 1px solid rgba(0,0,0,0.3);
-  font-size: 26px;
+  font-size: 16px;
 }
 
 .bk-info h3 span:first-child {
+  float: right;
+  font-family: 'Anaheim', sans-serif;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   text-transform: uppercase;
   padding-bottom: 5px;
+
   display: block;
-  color: #777;
+  color: #666666;
 }
 
 .bk-info p {
@@ -46,7 +67,7 @@
 }
 
 .bk-info button {
-  background: #FC756F;
+  background: #2b41fc;
   border: none;
   color: #fff;
   display: inline-block;
@@ -68,12 +89,13 @@
 
 .no-touch .bk-info button:hover,
 .bk-info button.bk-active {
-  background: #d0544e;
+  background: #2b41fc;
 }
 
 .bk-list li .bk-book {
   position: absolute;
   width: 100%;
+
   height: 400px;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -110,6 +132,7 @@
   backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+
 }
 
 .bk-list li .bk-page {
@@ -129,6 +152,7 @@
 .bk-list li .bk-front > div {
   width: 300px;
   height: 400px;
+
 }
 
 .bk-list li .bk-left,
@@ -390,3 +414,6 @@
 .no-js .bk-info button {
   display: none;
 }
+
+
+

@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { LivreComponent } from './components/livre/livre.component';
 import { LivresComponent } from './components/livres/livres.component';
 import { PanierComponent } from './components/panier/panier.component';
-
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 @NgModule({
   declarations: [
@@ -17,7 +17,7 @@ import { PanierComponent } from './components/panier/panier.component';
     PanierComponent
   ],
   imports: [
-    BrowserModule, FormsModule, HttpModule
+    BrowserModule, FormsModule, HttpModule,AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

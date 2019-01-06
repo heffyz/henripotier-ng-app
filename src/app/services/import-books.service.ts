@@ -9,5 +9,4 @@ export class ImportBooksService {
   getBooks(){
     return this.http.get('../assets/listeDesLivres.json').map(res => res.json());
   }
-
 }

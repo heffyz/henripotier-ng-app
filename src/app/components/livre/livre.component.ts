@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Book} from "../../models/book";
+import {ImportBooksService} from "../../services/import-books.service";
 @Component({
   selector: 'app-livre',
   templateUrl: './livre.component.html',
@@ -7,11 +8,14 @@ import {Book} from "../../models/book";
 })
 export class LivreComponent implements OnInit {
 @Input() livre: Book;
-cover:string;
-  constructor() { }
+@Input() synposis:string[]=[];
+
+cov:string;
+  constructor() {
+  }
 
   ngOnInit() {
-this.cover="../../../assets/img/"+this.livre.cover;
+    this.cov="../../../assets/img/"+this.livre.cover;
   }
 
 }
