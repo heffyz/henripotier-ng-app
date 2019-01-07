@@ -1,12 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import 'rxjs/add/operator/map';
+import {Book} from "../models/book";
+import {Observable} from "rxjs";
 
 @Injectable()
 export class ImportBooksService {
-
-  constructor(private http: Http) { }
-  getBooks(){
-    return this.http.get('../assets/listeDesLivres.json').map(res => res.json());
+  private BASE_URL="localhost:8082";
+  private SEND_BOOKS ='${this.BASE_URL}\\panier\\book';
+  constructor(private http: HttpClient) { }
+  getBooks():Observable<Book[]>{
+    return this.http.get<Book[]>('../assets/listeDesLivres.json');
+  }
+  postBook(book:Book):Observable<any>{
+    return this.http.post(this.SEND_BOOKS,book);
   }
 }

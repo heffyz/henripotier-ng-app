@@ -1,11 +1,11 @@
 import {Book} from "app/models/book";
 
 export class Product {
-  book:Book;
+  isbn:string;
   quantity:number;
 
-  constructor(book: Book, quantity: number) {
-    this.book = book;
+  constructor(isbn: string, quantity: number) {
+    this.isbn = isbn;
     this.quantity = quantity;
   }
 }
