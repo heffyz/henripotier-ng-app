@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import {Routing} from "./app.routing";
 import { AppComponent } from './app.component';
 import { LivreComponent } from './components/livre/livre.component';
 import { LivresComponent } from './components/livres/livres.component';
@@ -17,7 +17,7 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
     PanierComponent
   ],
   imports: [
-    BrowserModule, FormsModule, HttpModule,AngularFontAwesomeModule
+    BrowserModule, FormsModule, HttpModule,AngularFontAwesomeModule, Routing
   ],
   providers: [],
   bootstrap: [AppComponent]

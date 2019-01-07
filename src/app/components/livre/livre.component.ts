@@ -1,6 +1,6 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 import {Book} from "../../models/book";
-import {ImportBooksService} from "../../services/import-books.service";
+
 @Component({
   selector: 'app-livre',
   templateUrl: './livre.component.html',
@@ -9,13 +9,23 @@ import {ImportBooksService} from "../../services/import-books.service";
 export class LivreComponent implements OnInit {
 @Input() livre: Book;
 @Input() synposis:string[]=[];
-
+@Output() PSevent = new EventEmitter();
+quantity:number;
 cov:string;
   constructor() {
   }
 
   ngOnInit() {
+    this.quantity=0;
     this.cov="../../../assets/img/"+this.livre.cover;
   }
 
+  addQuantity(){
+    this.quantity++;
+    this.emitQuantity()
+  }
+
+  emitQuantity(){
+    this.PSevent.emit(this.quantity);
+  }
 }

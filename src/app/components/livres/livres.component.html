@@ -1,17 +1,11 @@
-<div class="w3-display-container img-wrapper">
-  <img src="../../../assets/img/library.jpg" class="w3-opacity  zoom" style="width: 100%"  alt="library">
-<div class="w3-display-topright">
-  <button class=" w3-btn  w3-opacity w3-transparent
-  w3-animate-top "><fa name="shopping-cart" inverse="true" size="2x" ></fa></button>
-</div>
-</div>
+
 <br><br> <div style="align-content: center">
   <h1 class="w3-animate-opacity" ><span>Livres</span></h1>
 </div>
 <br>
 <br>
-<div *ngFor="let book of books;let i = index; " class="w3-animate-opacity"  >
-  <app-livre  [livre]="book" ></app-livre>
+<div *ngFor="let book of books " class="w3-animate-opacity"  >
+  <app-livre  [livre]="book" (PSevent)='add(book,$event)'></app-livre>
 
 </div>
 

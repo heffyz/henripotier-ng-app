@@ -1,5 +1,33 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div >
-  <app-livres></app-livres>
-</div>
+  <div class="">
+  <div class="w3-bar w3-black">
+    <div class="w3-bar-item">
+      <a class="w3-padding  w3-hover-opacity  w3-transparent w3-animate-top " routerLink="/">
+      <img src="../../../assets/img/logo.png"  style="width: 4%;filter: invert(100%)">
+    </a>
+    </div>
+    <div class="w3-bar-item" style="float: right">
 
+      <a class="w3-padding  w3-hover-opacity  w3-transparent w3-animate-top " routerLink="/panier" (click)="emitPanier()">
+        <fa name="shopping-cart" inverse="true" size="2x" ></fa>
+      </a>
+      <a class="w3-padding  w3-hover-opacity  w3-transparent w3-animate-top " routerLink="/">
+        <fa name="book" inverse="true" size="2x" ></fa>
+      </a>
+    </div>
+  </div>
+  </div>
+  <div class="w3-display-container ">
+    <div class="img-wrapper">
+    <img src="../../../assets/img/library.jpg" class="w3-opacity-min  zoom" style="width: 100%"  alt="library">
+    <div class="w3-display-topmiddle ">
+      <br><br>
+      <img src="../../../assets/img/glasses.png" class="w3-padding-left w3-margin-left x" style="width: 100%;align-content: center; transform: scale(0.5);">
+    </div>
+
+  </div>
+
+  </div>
+  <router-outlet (activate)="onActivate($event)"></router-outlet>
+</div>

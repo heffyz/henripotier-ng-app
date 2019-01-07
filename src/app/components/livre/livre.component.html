@@ -1,14 +1,13 @@
 <div class="main  " >
 
     <ul id="bk-list" class="bk-list ">
-      <li  class="
-       w3-margin-left">
+      <li  class="w3-margin-left">
         <div class="bk-book book-1 bk-bookdefault w3-display-container" [ngStyle]="{'background': '#fff url(' + cov + ') no-repeat 0 0','background-size': 'cover'}">
         <div class="bk-front">
           <div class="bk-cover-back"></div>
           <div class="bk-cover" [ngStyle]="{'background': '#fff url(' + cov + ') no-repeat 0 0','background-size': 'cover'}">
             <div class="w3-display-middle w3-display-hover">
-              <button class="w3-button w3-circle w3-black w3-opacity"><fa name="magic" size="4x"></fa></button></div>
+              <button class="w3-button w3-circle w3-black w3-opacity" (click)="addQuantity()"><fa name="magic" size="4x"></fa></button></div>
             <div class="w3-display-topright w3-display-hover ">
 
 

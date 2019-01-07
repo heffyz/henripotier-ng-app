@@ -1,0 +1,22 @@
+@import url('https://www.w3schools.com/w3css/4/w3.css');
+
+.zoom {
+  height: 550px;
+  transition: transform 2.5s ease-in-out 0.1s; /* Animation */
+
+}
+
+.img-wrapper {
+  width: 100%; max-height: 550px;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.zoom:hover {
+
+  transform:scale(1.2);
+  -ms-transform:scale(1.2); /* IE 9 */
+  -moz-transform:scale(1.2); /* Firefox */
+  -webkit-transform:scale(1.2); /* Safari and Chrome */
+  -o-transform:scale(1.2); /* Opera */
+}

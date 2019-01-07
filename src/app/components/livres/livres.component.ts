@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {Book} from "../../models/book";
 import {ImportBooksService} from "../../services/import-books.service";
-import * as $ from 'jquery';
+import {Product} from "../../models/product";
+
 
 @Component({
   selector: 'app-livres',
@@ -11,6 +12,7 @@ import * as $ from 'jquery';
 })
 export class LivresComponent implements OnInit {
 books:Book[]=[];
+panier:Product[]=[];
   constructor(private importBooks: ImportBooksService) {
     this.importBooks.getBooks().subscribe((books)=>this.books=books);
   }
@@ -18,5 +20,9 @@ books:Book[]=[];
   ngOnInit() {
 
   }
+  add(b,g){
 
+    let p = new Product(b,g);
+    this.panier.push(p);
+  }
 }

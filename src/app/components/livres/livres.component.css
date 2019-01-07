@@ -12,22 +12,3 @@ h1 {
   margin:20px 0 20px 5%;
 color: #292120;}
 h1 span { background:#fff; padding:0 10px; }
-.zoom {
-  height: 600px;
-  transition: transform 2.5s ease-in-out 0.1s; /* Animation */
-
-}
-
-.img-wrapper {
-  width: 100%;
-  display: inline-block;
-  overflow: hidden;
-}
-
-.zoom:hover {
-  transform:scale(1.2);
-  -ms-transform:scale(1.2); /* IE 9 */
-  -moz-transform:scale(1.2); /* Firefox */
-  -webkit-transform:scale(1.2); /* Safari and Chrome */
-  -o-transform:scale(1.2); /* Opera */
-}
