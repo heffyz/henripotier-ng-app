@@ -1,23 +1,32 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div >
-  <div class="">
-  <div class="w3-bar w3-black">
-    <div class="w3-bar-item">
-      <a class="w3-padding  w3-hover-opacity  w3-transparent w3-animate-top " routerLink="/">
-      <img src="../../../assets/img/logo.png"  style="width: 4%;filter: invert(100%)">
-    </a>
-    </div>
-    <div class="w3-bar-item" style="float: right">
 
-      <a class="w3-padding  w3-hover-opacity  w3-transparent w3-animate-top " routerLink="/panier" (click)="emitPanier()">
-        <fa name="shopping-cart" inverse="true" size="2x" ></fa>
+  <div class="w3-top w3-bar ">
+    <div class="w3-bar-item">
+
+      <a class="w3-padding w3-red w3-border-red w3-hover-opacity-off
+      w3-opacity-min w3-hover-border-black w3-transparent w3-animate-top text-border"
+          routerLink="/">
+      <img src="../../../assets/img/logo.png" style="width: 4%;">
+    </a>
+
+    </div>
+
+    <div class="w3-bar-item  " style="float: right">
+
+      <a class="w3-padding  w3-hover-opacity-off w3-text-red bar-text itemshov
+       w3-opacity-min w3-animate-top w3-margin-left" style="text-decoration: none;
+	display: inline-block;" routerLink="/panier" >
+        Panier
       </a>
-      <a class="w3-padding  w3-hover-opacity  w3-transparent w3-animate-top " routerLink="/">
-        <fa name="book" inverse="true" size="2x" ></fa>
+
+      <a class="w3-padding w3-text-red bar-text itemshov
+      w3-text-red w3-hover-opacity-off w3-margin-left  w3-opacity-min w3-animate-top " style="text-decoration: none;
+	display: inline-block;" routerLink="/">
+        Livres
       </a>
+
     </div>
   </div>
-  </div>
+
   <div class="w3-display-container ">
     <div class="img-wrapper">
     <img src="../../../assets/img/library.jpg" class="w3-opacity-min  zoom" style="width: 100%"  alt="library">
@@ -25,9 +34,6 @@
       <br><br>
       <img src="../../../assets/img/glasses.png" class="w3-padding-left w3-margin-left x" style="width: 100%;align-content: center; transform: scale(0.5);">
     </div>
-
-  </div>
-
-  </div>
-  <router-outlet (activate)="onActivate($event)"></router-outlet>
+    </div>
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
 </div>

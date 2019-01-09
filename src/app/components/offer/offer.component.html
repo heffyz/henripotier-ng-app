@@ -1,0 +1,23 @@
+<div *ngIf="!hide ">
+  <button  class="w3-bar-item w3-button  w3-tag w3-right" *ngIf="totalPrice != 0 "(click)="countDiscount(offer,slice,o,totalPrice);">Découvre ton offre!</button>
+</div>
+<span class="w3-bar-item w3-red w3-right" *ngIf="disountValue != 0">Nouveau Prix : {{disountValue.toFixed(2)}}  €</span>
+<li class="w3-bar" *ngIf="disountValue != 0">
+<span class=" w3-text-blue-gray w3-right w3-tiny " (click)="detailValuechange()">
+  <a class="w3-btn w3-transparent w3-border-0" (click)="showdetails=!showdetails;" style="text-decoration: underline">{{detailsValue}} de détailles</a>
+</span></li>
+<div *ngIf="numberOfProducts==1 && showdetails">
+  <li class=" w3-text-red  w3-tiny">
+    <span > Tu as gagné(e) un {{offreEnFr(o.type)}} de rédution de valeur {{o.value}}. </span>
+  </li>
+</div>
+
+
+<div *ngIf="numberOfProducts >1 && showdetails">
+  <li class="w3-text-red  w3-tiny">
+    <span>Tu as gagné(e) :</span>
+    <span  *ngFor="let o of offer">  Un {{offreEnFr(o.type)}} de rédution de valeur {{o.value}}. </span>
+
+    <span *ngFor="let o of slice">  Une {{offreEnFr(o.type)}} de rédution de valeur {{o.value}} sur tous les {{o.sliceValue}}. </span>
+  </li>
+</div>

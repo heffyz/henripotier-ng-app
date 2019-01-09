@@ -8,13 +8,15 @@ import { LivreComponent } from './components/livre/livre.component';
 import { LivresComponent } from './components/livres/livres.component';
 import { PanierComponent } from './components/panier/panier.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
+import { OfferComponent } from './components/offer/offer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LivreComponent,
     LivresComponent,
-    PanierComponent
+    PanierComponent,
+    OfferComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,AngularFontAwesomeModule, Routing
@@ -22,4 +24,6 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+}

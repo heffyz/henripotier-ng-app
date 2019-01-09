@@ -21,7 +21,7 @@ cov:string;
   }
 
   addQuantity(){
-    this.quantity++;
+    this.quantity=1;
     this.emitQuantity()
   }
 

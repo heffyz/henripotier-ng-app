@@ -1,5 +1,16 @@
 @import url('https://www.w3schools.com/w3css/4/w3.css');
-
+.bar-text{
+  font-family: 'Domine', serif;
+  font-size: 19px;
+  color: #292120;
+}
+.text-border{
+  border-style: solid;
+  border-width:10px;
+  border-right:none;
+  border-top: none;
+  border-bottom: none;
+}
 .zoom {
   height: 550px;
   transition: transform 2.5s ease-in-out 0.1s; /* Animation */
@@ -19,4 +30,19 @@
   -moz-transform:scale(1.2); /* Firefox */
   -webkit-transform:scale(1.2); /* Safari and Chrome */
   -o-transform:scale(1.2); /* Opera */
+}
+.itemshov:after{
+  content: ' ';
+  display:block;
+  height: 2px;
+  width:0px;
+  background-color: #f44336;
+
+  transition: width  .3s;
+  transition-timing-function: ease-out;
+}
+.itemshov:hover:after{
+  width:100%;
+  transition: width .3s;
+  transition-timing-function: ease-in;
 }

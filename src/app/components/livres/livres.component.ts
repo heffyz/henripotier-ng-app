@@ -1,8 +1,7 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Book} from "../../models/book";
 import {ImportBooksService} from "../../services/import-books.service";
 import {Product} from "../../models/product";
-import {forEach} from "@angular/router/src/utils/collection";
 
 
 @Component({
@@ -13,24 +12,24 @@ import {forEach} from "@angular/router/src/utils/collection";
 })
 export class LivresComponent implements OnInit {
 books:Book[]=[];
-panier:Product[]=[];
   constructor(private importBooks: ImportBooksService) {
     this.importBooks.getBooks().subscribe((books)=>this.books=books);
-    this.books.forEach(function (book){
-      this.importBooks.postBook(book).subscribe(
-        res =>{location.reload();},
-        err => {console.error('error');}
-      );
-    });
-
   }
 
   ngOnInit() {
-
+    this.books.forEach(function (book){
+      this.importBooks.postBook(book).subscribe(
+        res =>{console.log('book sent')},
+        err => {console.error('error');}
+      );
+    });
   }
   add(b,g){
 
-    let p = new Product(b.isbn,g);
-    this.panier.push(p);
+    let product = new Product(b.isbn,g);
+    this.importBooks.addProduct(product).subscribe(
+      res =>{console.log("add done");},
+      err =>{console.log("error");}
+    )
   }
 }
