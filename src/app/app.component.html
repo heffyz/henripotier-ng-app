@@ -2,26 +2,28 @@
   <div class="w3-top w3-bar ">
     <div class="w3-bar-item">
 
-      <a class="w3-padding w3-red w3-border-red w3-hover-opacity-off
+      <a class="w3-padding  w3-border-0 w3-hover-opacity-off
       w3-opacity-min w3-hover-border-black w3-transparent w3-animate-top text-border"
           routerLink="/">
-      <img src="../../../assets/img/logo.png" style="width: 4%;">
+      <img src="../../../assets/img/logo.png" style="width: 5%;">
     </a>
 
     </div>
 
     <div class="w3-bar-item  " style="float: right">
 
-      <a class="w3-padding  w3-hover-opacity-off w3-text-red bar-text itemshov
+      <a class="w3-padding  w3-hover-opacity-off w3-text-black bar-text itemshov
        w3-opacity-min w3-animate-top w3-margin-left" style="text-decoration: none;
-	display: inline-block;" routerLink="/panier" >
+	display: inline-block;" routerLink="/panier" routerLinkActive="rl-active" [routerLinkActiveOptions]="{exact:
+true}">
         Panier
       </a>
 
-      <a class="w3-padding w3-text-red bar-text itemshov
-      w3-text-red w3-hover-opacity-off w3-margin-left  w3-opacity-min w3-animate-top " style="text-decoration: none;
-	display: inline-block;" routerLink="/">
-        Livres
+      <a class="w3-padding w3-text-black bar-text itemshov
+      w3-hover-opacity-off  w3-opacity-min w3-animate-top " style="text-decoration: none;
+	display: inline-block;" routerLink="/" routerLinkActive="rl-active" [routerLinkActiveOptions]="{exact:
+true}">
+        Librérie
       </a>
 
     </div>
@@ -29,11 +31,11 @@
 
   <div class="w3-display-container ">
     <div class="img-wrapper">
-    <img src="../../../assets/img/library.jpg" class="w3-opacity-min  zoom" style="width: 100%"  alt="library">
-    <div class="w3-display-topmiddle ">
-      <br><br>
-      <img src="../../../assets/img/glasses.png" class="w3-padding-left w3-margin-left x" style="width: 100%;align-content: center; transform: scale(0.5);">
-    </div>
-    </div>
+    <img src="../../../assets/img/library.jpg" class="w3-opacity w3-sepia  zoom" style="width: 100%"  alt="library">
+
+
+      <img src="../../../assets/img/glasses.png" class="w3-padding-left w3-margin-left w3-display-topmiddle" style="width: 100%; transform: scale(0.5);">
+
+    </div></div>
     <router-outlet (activate)="onActivate($event)"></router-outlet>
-</div>
+
