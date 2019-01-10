@@ -26,7 +26,8 @@
       </span>
       <img src="../../../assets/img/{{getBookByIsbn(p)?.cover}}" class="w3-bar-item  w3-hide-small" style="width:85px">
       <div class="w3-bar-item">
-        <span class="w3-large"><a [routerLink]="['/book', getBookByIsbn(p)?.isbn] " >{{getBookByIsbn(p)?.title}}</a></span><br>
+        <span class="w3-large"><a
+          [routerLink]="['/book', getBookByIsbn(p)?.isbn] ">{{getBookByIsbn(p)?.title}}</a></span><br>
         <span>{{getBookByIsbn(p)?.price}} €</span>
 
       </div>

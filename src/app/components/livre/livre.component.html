@@ -32,7 +32,7 @@
       <div class="bk-info ">
 
         <h3><span>Price : {{livre.price}} €</span>
-          <a [routerLink]="['/book', livre.isbn] " (click)="sendBook(livre)">{{livre.title}}</a>
+          <a (click)="sendBook(livre)" [routerLink]="['/book', livre.isbn] ">{{livre.title}}</a>
 
         </h3>
       </div>

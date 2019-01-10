@@ -16,7 +16,8 @@ export class PanierComponent implements OnInit {
   books: Book[] = [];
   total: number;
   hide: boolean = false;
-  message:string;
+  message: string;
+
   constructor(private importBooks: SharedService) {
     this.importBooks.getPanier().subscribe((panier) => this.panier = panier);
 
@@ -45,7 +46,7 @@ export class PanierComponent implements OnInit {
         t = t + (price * this.panier[i].quantity);
         count++;
 
-        this.message="1";
+        this.message = "1";
         this.importBooks.changeMessage(this.message);
       }
     return t;
@@ -67,7 +68,7 @@ export class PanierComponent implements OnInit {
       this.admonish();
     } else {
 
-      this.message="0";
+      this.message = "0";
       this.importBooks.changeMessage(this.message);
       location.reload();
     }
@@ -93,7 +94,7 @@ export class PanierComponent implements OnInit {
       }
     );
 
-    this.message="0";
+    this.message = "0";
     this.importBooks.changeMessage(this.message);
     location.reload();
     this.admonish();

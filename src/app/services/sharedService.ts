@@ -7,10 +7,10 @@ import {Product} from "../models/product";
 import {Offer} from "../models/offer";
 import {Slice} from "../models/slice";
 import {Serializer} from "../models/serializer";
-import {forEach} from "@angular/router/src/utils/collection";
 
 @Injectable()
 export class SharedService {
+  sharedNode = 0;
   private BASE_URL = 'http://localhost:8082';
   private SEND_BOOKS = `${this.BASE_URL}\\panier\\book`;
   private ADD_PRODUCT = `${this.BASE_URL}\\panier\\add`;
@@ -20,25 +20,29 @@ export class SharedService {
   private OFFER_TWO = `${this.BASE_URL}\\promo\\offer\\2`;
   private serializer: Serializer;
   private messageSource = new BehaviorSubject('0');
-  private bookSource = new BehaviorSubject<Book>(new Book('','',0,'',[]));
-  currentBook = this.bookSource.asObservable();
   currentMessage = this.messageSource.asObservable();
+  private bookSource = new BehaviorSubject<Book>(new Book('', '', 0, '', []));
+  currentBook = this.bookSource.asObservable();
+
   constructor(private http: HttpClient) {
   }
 
-  sharedNode = 0;
   getBooks(): Observable<Book[]> {
     return this.http.get<Book[]>('../assets/listeDesLivres.json');
   }
-getBook(isbn):Observable<Book>{
-    return this.getBooks().map(b=>b.find(e=>e.isbn==isbn));
-}
+
+  getBook(isbn): Observable<Book> {
+    return this.getBooks().map(b => b.find(e => e.isbn == isbn));
+  }
+
   changeMessage(message: string) {
     this.messageSource.next(message)
   }
-  changeBook(b:Book){
+
+  changeBook(b: Book) {
     this.bookSource.next(b);
   }
+
   postBook(book: Book): Observable<any> {
     return this.http.post(this.SEND_BOOKS, book);
   }

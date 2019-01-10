@@ -9,22 +9,21 @@ import {Book} from "./models/book";
   styleUrls: ['./app.component.css'],
   providers: [SharedService]
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'app';
   panier: Product[] = [];
-  books:Book[]=[];
-  message:string;
+  books: Book[] = [];
+  message: string;
 
   constructor(private importBooks: SharedService) {
     this.importBooks.getPanier().subscribe((panier) => this.panier = panier);
     if (this.panier.length != 0) {
-      this.message ="1";
+      this.message = "1";
     }
 
 
-
-
   }
+
   ngOnInit(): void {
     this.importBooks.currentMessage.subscribe(message => this.message = message);
 
@@ -41,7 +40,6 @@ export class AppComponent implements OnInit{
     }, 16);
 
   }
-
 
 
 }

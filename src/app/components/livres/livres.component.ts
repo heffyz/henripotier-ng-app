@@ -25,7 +25,7 @@ export class LivresComponent implements OnInit {
     let product = new Product(b.isbn, g);
     this.importBooks.addProduct(product).subscribe(
       res => {
-        this.importBooks.sharedNode =1;
+        this.importBooks.sharedNode = 1;
         console.log("add done");
       },
       err => {
