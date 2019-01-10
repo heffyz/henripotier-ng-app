@@ -1,16 +1,19 @@
 @import url('https://www.w3schools.com/w3css/4/w3.css');
-.bar-text{
+
+.bar-text {
   font-family: 'Domine', serif;
   font-size: 19px;
   color: #292120;
 }
-.text-border{
+
+.text-border {
   border-style: solid;
-  border-width:10px;
-  border-right:none;
+  border-width: 10px;
+  border-right: none;
   border-top: none;
   border-bottom: none;
 }
+
 .zoom {
   height: 250px;
   transition: transform 2.5s ease-in-out 0.1s; /* Animation */
@@ -18,34 +21,54 @@
 }
 
 .img-wrapper {
-  width: 100%; max-height:250px;
+  width: 100%;
+  max-height: 250px;
   display: inline-block;
   overflow: hidden;
 }
 
 .zoom:hover {
 
-  transform:scale(1.2);
-  -ms-transform:scale(1.2); /* IE 9 */
-  -moz-transform:scale(1.2); /* Firefox */
-  -webkit-transform:scale(1.2); /* Safari and Chrome */
-  -o-transform:scale(1.2); /* Opera */
+  transform: scale(1.2);
+  -ms-transform: scale(1.2); /* IE 9 */
+  -moz-transform: scale(1.2); /* Firefox */
+  -webkit-transform: scale(1.2); /* Safari and Chrome */
+  -o-transform: scale(1.2); /* Opera */
 }
-.itemshov:after{
+
+.itemshov:after {
   content: ' ';
-  display:block;
+  display: block;
   height: 2px;
-  width:0px;
+  width: 0px;
   background-color: #292120;
 
-  transition: width  .3s;
+  transition: width .3s;
   transition-timing-function: ease-out;
 }
-.itemshov:hover:after{
-  width:100%;
+
+.itemshov:hover:after {
+  width: 100%;
   transition: width .3s;
   transition-timing-function: ease-in;
 }
-.rl-active:after{
-  width:100%;
+
+.rl-active:after {
+  width: 100%;
+}
+
+.glow {
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60000, 0 0 40px #e60000, 0 0 50px #e60000, 0 0 60px #e60000, 0 0 70px #e60000;
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #fff600, 0 0 60px #fff600, 0 0 70px #ff4da6, 0 0 80px #e60000;
+  }
 }

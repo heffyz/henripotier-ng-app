@@ -1,8 +1,9 @@
 @import url('https://www.w3schools.com/w3css/4/w3.css');
 @import url('https://fonts.googleapis.com/css?family=Anaheim|Domine');
-html { height: 100%; }
 
-
+html {
+  height: 100%;
+}
 
 
 .main {
@@ -44,7 +45,7 @@ html { height: 100%; }
   font-family: 'Domine', serif;
   padding: 0px 0 10px;
   margin-bottom: 20px;
-  border-bottom: 1px solid rgba(0,0,0,0.3);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
   font-size: 16px;
 }
 
@@ -77,14 +78,13 @@ html { height: 100%; }
   text-transform: uppercase;
   cursor: pointer;
   margin-right: 4px;
-  box-shadow: 1px 1px 1px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
 .bk-info button.bk-active,
 .bk-info button:active {
-  box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.8),
-    inset 0 -1px 1px rgba(0,0,0,0.2);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8),
+  inset 0 -1px 1px rgba(0, 0, 0, 0.2);
 }
 
 .no-touch .bk-info button:hover,
@@ -104,8 +104,8 @@ html { height: 100%; }
 }
 
 .bk-list li .bk-book.bk-bookdefault:hover {
-  -webkit-transform: rotate3d(0,1,0,35deg);
-  transform: rotate3d(0,1,0,35deg);
+  -webkit-transform: rotate3d(0, 1, 0, 35deg);
+  transform: rotate3d(0, 1, 0, 35deg);
 }
 
 .bk-list li .bk-book > div,
@@ -121,8 +121,8 @@ html { height: 100%; }
   transform-origin: 0% 50%;
   -webkit-transition: -webkit-transform .5s;
   transition: transform .5s;
-  -webkit-transform: translate3d(0,0,20px);
-  transform: translate3d(0,0,20px);
+  -webkit-transform: translate3d(0, 0, 20px);
+  transform: translate3d(0, 0, 20px);
   z-index: 10;
 }
 
@@ -136,8 +136,8 @@ html { height: 100%; }
 }
 
 .bk-list li .bk-page {
-  -webkit-transform: translate3d(0,0,19px);
-  transform: translate3d(0,0,19px);
+  -webkit-transform: translate3d(0, 0, 19px);
+  transform: translate3d(0, 0, 19px);
   display: none;
   width: 295px;
   height: 390px;
@@ -171,60 +171,44 @@ html { height: 100%; }
 }
 
 .bk-list li .bk-back {
-  -webkit-transform: rotate3d(0,1,0,-180deg) translate3d(0,0,20px);
-  transform: rotate3d(0,1,0,-180deg) translate3d(0,0,20px);
-  box-shadow: 10px 10px 30px rgba(0,0,0,0.3);
+  -webkit-transform: rotate3d(0, 1, 0, -180deg) translate3d(0, 0, 20px);
+  transform: rotate3d(0, 1, 0, -180deg) translate3d(0, 0, 20px);
+  box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
   border-radius: 3px 0 0 3px;
 }
 
 .bk-list li .bk-cover-back {
   background-color: #000;
-  -webkit-transform: rotate3d(0,1,0,-179deg);
-  transform: rotate3d(0,1,0,-179deg);
+  -webkit-transform: rotate3d(0, 1, 0, -179deg);
+  transform: rotate3d(0, 1, 0, -179deg);
 }
 
 .bk-list li .bk-right {
   height: 390px;
   top: 5px;
-  -webkit-transform: rotate3d(0,1,0,90deg) translate3d(0,0,295px);
-  -moz-transform: rotate3d(0,1,0,90deg) translate3d(0,0,295px);
-  transform: rotate3d(0,1,0,90deg) translate3d(0,0,295px);
+  -webkit-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 295px);
+  -moz-transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 295px);
+  transform: rotate3d(0, 1, 0, 90deg) translate3d(0, 0, 295px);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .bk-list li .bk-left {
   height: 400px;
-  -webkit-transform: rotate3d(0,1,0,-90deg);
-  transform: rotate3d(0,1,0,-90deg);
+  -webkit-transform: rotate3d(0, 1, 0, -90deg);
+  transform: rotate3d(0, 1, 0, -90deg);
 }
 
 .bk-list li .bk-top {
-  -webkit-transform: rotate3d(1,0,0,90deg);
-  transform: rotate3d(1,0,0,90deg);
+  -webkit-transform: rotate3d(1, 0, 0, 90deg);
+  transform: rotate3d(1, 0, 0, 90deg);
 }
 
 .bk-list li .bk-bottom {
-  -webkit-transform: rotate3d(1,0,0,-90deg) translate3d(0,0,390px);
-  transform: rotate3d(1,0,0,-90deg) translate3d(0,0,390px);
+  -webkit-transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 390px);
+  transform: rotate3d(1, 0, 0, -90deg) translate3d(0, 0, 390px);
 }
 
-/* Transform classes */
-
-.bk-list li .bk-viewinside .bk-front {
-  -webkit-transform: translate3d(0,0,20px) rotate3d(0,1,0,-160deg);
-  transform: translate3d(0,0,20px) rotate3d(0,1,0,-160deg);
-}
-
-.bk-list li .bk-book.bk-viewinside {
-  -webkit-transform: translate3d(0,0,150px) rotate3d(0,1,0,0deg);
-  transform: translate3d(0,0,150px) rotate3d(0,1,0,0deg);
-}
-
-.bk-list li .bk-book.bk-viewback {
-  -webkit-transform: translate3d(0,0,0px) rotate3d(0,1,0,180deg);
-  transform: translate3d(0,0,0px) rotate3d(0,1,0,180deg);
-}
 
 /* Main colors and content */
 
@@ -237,8 +221,7 @@ html { height: 100%; }
 
 .bk-list li .bk-front > div {
   border-radius: 0 3px 3px 0;
-  box-shadow:
-    inset 4px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 4px 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .bk-list li .bk-front:after {
@@ -258,7 +241,7 @@ html { height: 100%; }
   left: 10px;
   bottom: 0;
   width: 3px;
-  background: rgba(0,0,0,0.06);
+  background: rgba(0, 0, 0, 0.06);
   box-shadow: 1px 0 3px rgba(255, 255, 255, 0.1);
 }
 
@@ -315,26 +298,6 @@ html { height: 100%; }
   user-select: none;
 }
 
-.bk-page nav {
-  display: block;
-  text-align: center;
-  margin-top: 20px;
-  position: relative;
-  z-index: 100;
-  cursor: pointer;
-}
-
-.bk-page nav span {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  color: #aaa;
-  background: #f0f0f0;
-  border-radius: 50%;
-}
-
-/* Individual style & artwork */
-
 /* Book 1 */
 .book-1 .bk-front > div,
 .book-1 .bk-back,
@@ -345,7 +308,7 @@ html { height: 100%; }
 
 .book-1 .bk-cover {
 
-  background-size:     cover;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: 10px 1px;
 }
@@ -356,9 +319,9 @@ html { height: 100%; }
   right: 0;
   left: 0;
   padding: 30px;
-  background: rgba(255,255,255,0.2);
+  background: rgba(255, 255, 255, 0.2);
   color: #fff;
-  text-shadow: 0 -1px 0 rgba(0,0,0,0.1);
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
 .book-1 .bk-cover h2 span:first-child,
@@ -415,5 +378,48 @@ html { height: 100%; }
   display: none;
 }
 
+/* The snackbar - position it at the bottom and in the middle of the screen */
+.snackbar {
+  visibility: hidden; /* Hidden by default. Visible on click */
+  min-width: 250px; /* Set a default minimum width */
+  margin-left: -125px; /* Divide value of min-width by 2 */
+  background-color: #333; /* Black background color */
+  color: #fff; /* White text color */
+  text-align: center; /* Centered text */
+  border-radius: 2px; /* Rounded borders */
+  padding: 16px; /* Padding */
+  position: fixed; /* Sit on top of the screen */
+  z-index: 1; /* Add a z-index if needed */
+  left: 50%; /* Center the snackbar */
+  bottom: 30px; /* 30px from the bottom */
+}
 
+.snackbar .show {
+  visibility: visible; /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+  However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
+}
 

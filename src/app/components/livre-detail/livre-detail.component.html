@@ -1,0 +1,33 @@
+<br><br>
+<div class="w3-container" style="align-content: center">
+  <h1 class="w3-animate-opacity"><span>{{book.title}}</span></h1>
+</div>
+<br>
+<div class="w3-card   w3-margin">
+  <div class="w3-row">
+
+    <div class="w3-col w3-padding-0 w3-third w3-display-container">
+
+  <img src="../../../assets/img/{{book?.cover}}"  class="w3-card " style="height:630px">
+    <div class="w3-display-topright w3-tag w3-margin">
+      Prix : {{book.price}} €
+    </div>
+      <div class="w3-display-topleft w3-margin">
+        <button class=" w3-hover-opacity w3-border-0 w3-tag " (click)="addProduct(book)"> Ajouter au panier</button>
+      </div>
+    </div>
+    <div class="w3-col w3-twothird" >
+      <div class=""></div>
+      <div class="w3-container w3-content w3-center  " style="margin-right: 22%;margin-left: 2%">
+        <h3 class="w3-wide">Le Synopsis :</h3>
+        <div *ngFor="let s of book.synopsis">
+        <p class="w3-justify w3-medium"> {{s}}</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<br>
+<br>

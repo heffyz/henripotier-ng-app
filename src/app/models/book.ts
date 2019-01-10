@@ -3,7 +3,7 @@ export class Book {
   title: string;
   price: number;
   cover: string;
-  synopsis: string[]=[];
+  synopsis: string[] = [];
 
   constructor(isbn: string, title: string, price: number, cover: string, synopsis: string[]) {
     this.isbn = isbn;

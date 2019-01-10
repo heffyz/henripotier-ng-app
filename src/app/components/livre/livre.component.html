@@ -1,18 +1,23 @@
-<div class="main  " >
+<div class="main  ">
 
-    <ul id="bk-list" class="bk-list ">
-      <li  class="w3-margin-left">
-        <div class="bk-book book-1 bk-bookdefault w3-display-container" [ngStyle]="{'background': '#fff url(' + cov + ') no-repeat 0 0','background-size': 'cover'}">
+  <ul class="bk-list " id="bk-list">
+    <li class="w3-margin-left">
+      <div [ngStyle]="{'background': '#fff url(' + cov + ') no-repeat 0 0','background-size': 'cover'}"
+           class="bk-book book-1 bk-bookdefault w3-display-container">
         <div class="bk-front">
           <div class="bk-cover-back"></div>
-          <div class="bk-cover" [ngStyle]="{'background': '#fff url(' + cov + ') no-repeat 0 0','background-size': 'cover'}">
+          <div [ngStyle]="{'background': '#fff url(' + cov + ') no-repeat 0 0','background-size': 'cover'}"
+               class="bk-cover">
             <div class="w3-display-middle w3-display-hover">
-              <button class="w3-button w3-circle w3-black w3-opacity" (click)="addQuantity()"><fa name="magic" size="4x"></fa></button></div>
+              <button (click)="addQuantity()" class="w3-button w3-circle w3-black w3-opacity">
+                <fa name="magic" size="4x"></fa>
+              </button>
+            </div>
             <div class="w3-display-topright w3-display-hover ">
 
 
               <p class="w3-tag w3-tiny">{{livre.price}}€</p>
-          </div>
+            </div>
           </div>
 
         </div>
@@ -23,14 +28,16 @@
         </div>
         <div class="bk-top"></div>
         <div class="bk-bottom"></div>
-        </div>
-        <div class="bk-info ">
+      </div>
+      <div class="bk-info ">
 
-          <h3> <span>Price : {{livre.price}} €</span>{{livre.title}}
+        <h3><span>Price : {{livre.price}} €</span>
+          <a [routerLink]="['/book', livre.isbn] " (click)="sendBook(livre)">{{livre.title}}</a>
 
-          </h3>
-          <button>détaille</button>
-        </div>
-      </li>
-    </ul>
+        </h3>
+      </div>
+    </li>
+  </ul>
 </div>
+
+

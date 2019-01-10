@@ -9,6 +9,7 @@ import { LivresComponent } from './components/livres/livres.component';
 import { PanierComponent } from './components/panier/panier.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { OfferComponent } from './components/offer/offer.component';
+import { LivreDetailComponent } from './components/livre-detail/livre-detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { OfferComponent } from './components/offer/offer.component';
     LivreComponent,
     LivresComponent,
     PanierComponent,
-    OfferComponent
+    OfferComponent,
+    LivreDetailComponent
   ],
   imports: [
     BrowserModule, FormsModule, HttpClientModule,AngularFontAwesomeModule, Routing
